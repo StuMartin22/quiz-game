@@ -12,6 +12,16 @@ var sectionOne = $('#sectionOne')
 var titleActual = $('<h1>')
 var gameRulesParagraph = $('<p>')
 
+var answers = $('#answers')
+var questions = $('#questions')
+var buttons = $('#buttons')
+
+var buttonList = $('<ol>')
+var buttonOne = $('<li>')
+var buttonTwo = $('<li>')
+var buttonThree = $('<li>')
+var buttonFour = $('<li>')
+
 $(sectionOne).append(titleActual);
 $(sectionOne).append(gameRulesParagraph);
 $(sectionOne).append(beginGame);

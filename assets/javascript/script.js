@@ -11,20 +11,21 @@ var timeDisplay = $('.timerStart')
 var quest = $('.questions')
 var testers = $('#test')
 var sectionOne = $('#sectionOne')
-
 var titleActual = $('<h1>')
 var gameRulesParagraph = $('<p>')
-
 var answers = $('#answers')
 var questions = $('#questions')
 var buttons = $('#buttons')
-
 var buttonList = $('<ol>')
 var buttonOne = $('<li>')
 var buttonTwo = $('<li>')
 var buttonThree = $('<li>')
 var buttonFour = $('<li>') 
 var questionSection = $('#questionSection')
+var highScoreDiv = $('<div>')
+var highScoreContainer = $('<p>')
+var highScoreTitle = $('<h4>')
+var scoreForm = $('')
 var hideList = false
 // end of variable definitions
 

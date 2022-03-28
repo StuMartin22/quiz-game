@@ -46,6 +46,11 @@ titleActual.text('TEST YOUR KNOWLEDGE');
 gameRulesParagraph.text("Rules: This is a timed trivia game! You are going to see a series of questions which will have multiple choice answers. Select the answer you think is correct! If you answer correctly, congratulations, you can move on to the next question! But if you answer incorrectly.. you will lose time off the clock! Good luck!") 
 // end of changes to text of variable
 
+//toggles card-timer and questionSection to be toggled off when page loads
+$(".card-timer").toggle()
+$(questionSection).toggle()
+//end of toggling off
+
 // THE FOLLOWING DESCRIBES BEGIN GAME ON CLICK BELOW
 // begins game on button click / click starts function
 // timer variable defined within function, begins timer
@@ -60,40 +65,32 @@ $(beginGame).click(function () {
     var timer = setInterval(function () { 
         timeLeft--; 
         if (timeLeft < 0) { 
-            clearInterval(timer)
+            clearInterval(timer);
         } else if (timeLeft === 0) { 
-            $(timeDisplay).text(timeLeft) 
-            $(timeDisplay).text('') 
-        } else $(timeDisplay).text(timeLeft) 
+            $(timeDisplay).text(timeLeft);
+            // $(timeDisplay).text('') 
+            $(".card-timer").text('');
+            $(questionSection).text('');
+            alert('GAME OVER')
+        } else $(timeDisplay).text(timeLeft);
 } ,1000) 
 });
 // End of beginGame 
 
-// $(beginGame).on('click', function () {
-//     if (hideList) {
-//         $(questionSection).css('display','none');
-//         hideList = !hideList;
-//     } else 
-//         { $(questionSection).css('display','block')
-//         hideList = !hideList;
-//         }
-//     });
+//game starts and elements show themselves on click of start game button.
+$(beginGame).on('click', function () {
+    if (hideList) {
+        $(questionSection).toggle();
+        $(".card-timer").toggle();
+        hideList = !hideList;
+    } else 
+        { $(questionSection).toggle()
+        $(".card-timer").toggle();
+        hideList = !hideList;
+        }
+    });
+// end of elements showing selves on click start.
 
-// beginGame.addEventListener('click', function () {
-//     var timer = setInterval(function () {
-//         timeLeft--;
-//         if (timeLeft < 0) {
-//             clearInterval(timer)
-//         } else if (timeLeft === 0) {
-//             $(timeDisplay).text(timeLeft)
-//             timeLeft.text('')
-//             // timeDisplay.textcontent = timeLeft
-//             // timeLeft.textContent = " "
-//         } else (
-//             timeDisplay.textContent = timeLeft
-//         )
-//     }, 1000)
-// })
 
 // var pTest = $('<p>');
 // pTest.text('test');

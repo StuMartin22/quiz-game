@@ -1,3 +1,4 @@
+var questionIndex = 0
 var gameQuestions = [
     {
         question: "the question",
@@ -25,3 +26,16 @@ var gameQuestions = [
         correct: 'answer 3',
     },
 ]
+
+$(beginGame).on("click", function nextQuestion () {
+    // console.log(gameQuestions[questionIndex])
+    questionIndex++;
+    // console.log(gameQuestions[questionIndex])
+    if (questionIndex===gameQuestions.length) {
+        console.log('true')
+    } else {
+        nextQuestion();
+    }
+    });
+
+// nextQuestion();

@@ -17,29 +17,43 @@
 
 // nextcolor();
 
-localStorage.setItem('Bob', 'Hello, my name is Bob');
-console.log(localStorage.getItem('Bob'));
+// function nextQuestion () {
+//     console.log(gameQuestions[questionIndex])
+
+//     questionIndex++;
+//     console.log(gameQuestions[questionIndex])
+//     if (questionIndex===gameQuestions.length) {
+//         console.log('stop')
+//     } else {
+//         nextQuestion();
+//     }
+//     }
+
+//     nextQuestion();
+
+// localStorage.setItem('Bob', 'Hello, my name is Bob');
+// console.log(localStorage.getItem('Bob'));
 
 //practical purposes:
 //Element.textContent = localStorage.getItem('Bob')
 
 // Local Storage only works with Strings!!
-localStorage.setItem('Bob', JSON.stringify('Hello, my name is Bob'));
-console.log(JSON.parse(localStorage.getItem('Bob')));
+// localStorage.setItem('Bob', JSON.stringify('Hello, my name is Bob'));
+// console.log(JSON.parse(localStorage.getItem('Bob')));
 
 //localStorage.setItem("highScore", $('input').val())
 
-var arrayOfScores = [];
+// var arrayOfScores = [];
 
-var newScore = {
-    initials: initials,
-    score: finalScore
-}
+// var newScore = {
+//     initials: initials,
+//     score: finalScore
+// }
 
-arrayOfScores.push(newScore);
+// arrayOfScores.push(newScore);
 
 
-localStorage.setItem('AllHighScores', JSON.stringify(arrayOfScores));
+// localStorage.setItem('AllHighScores', JSON.stringify(arrayOfScores));
 
 //score:time -- displayed time as score
 // intitials grabbed from input from page

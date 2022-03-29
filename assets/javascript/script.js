@@ -9,34 +9,30 @@ var beginGame = $('.start-btn')
 var timeLeft = 5
 var timeDisplay = $('.timerStart')
 var quest = $('.questions')
-var testers = $('#test')
+// var testers = $('#test')
 var sectionOne = $('#sectionOne')
 var titleActual = $('<h1>')
 var gameRulesParagraph = $('<p>')
 var answers = $('#answers')
 var questions = $('#questions')
-var buttons = $('#buttons')
-var buttonList = $('<ol>')
-var buttonOne = $('<li>')
-var buttonTwo = $('<li>')
-var buttonThree = $('<li>')
-var buttonFour = $('<li>') 
+// var buttons = $('#buttons')
+// var buttonList = $('<ol>')
+// var buttonOne = $('<li>')
+// var buttonTwo = $('<li>')
+// var buttonThree = $('<li>')
+// var buttonFour = $('<li>') 
 var questionSection = $('#questionSection')
-var highScoreDiv = $('<div>')
-var highScoreContainer = $('<p>')
-var highScoreTitle = $('<h4>')
-var scoreForm = $('')
 var hideList = false
 var questionIndex = 0
 // end of variable definitions
 
 // The following begin appending children elements to parent element 
 // line 1 appends child element buttonList to parent element buttons
-$(buttons).append(buttonList); 
-$(buttonList).append(buttonOne); 
-$(buttonList).append(buttonTwo);
-$(buttonList).append(buttonThree);
-$(buttonList).append(buttonFour);
+// $(buttons).append(buttonList); 
+// $(buttonList).append(buttonOne); 
+// $(buttonList).append(buttonTwo);
+// $(buttonList).append(buttonThree);
+// $(buttonList).append(buttonFour);
 
 $(sectionOne).append(titleActual);
 $(sectionOne).append(gameRulesParagraph);
@@ -84,10 +80,12 @@ $(beginGame).on('click', function () {
     if (hideList) {
         $(questionSection).toggle();
         $(".card-timer").toggle();
+        $("#sectionOne").toggle();
         hideList = !hideList;
     } else 
-        { $(questionSection).toggle()
+        { $(questionSection).toggle();
         $(".card-timer").toggle();
+        $("#sectionOne").toggle();
         hideList = !hideList;
         }
     });

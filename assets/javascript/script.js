@@ -2,7 +2,7 @@
 var rootEl = $('#root'); 
 
 // beginning of variable definitions
-//E.g.line defines variable bigTitle as .mainTitle class from HTML
+// E.g.line defines variable bigTitle as .mainTitle class from HTML
 var bigTitle = $('.mainTitle') 
 var gameRules = $('.rules') 
 var beginGame = $('.start-btn')
@@ -27,6 +27,7 @@ var highScoreContainer = $('<p>')
 var highScoreTitle = $('<h4>')
 var scoreForm = $('')
 var hideList = false
+var questionIndex = 0
 // end of variable definitions
 
 // The following begin appending children elements to parent element 
@@ -78,7 +79,7 @@ $(beginGame).click(function () {
 });
 // End of beginGame 
 
-//game starts and elements show themselves on click of start game button.
+// game starts and elements show themselves on click of start game button.
 $(beginGame).on('click', function () {
     if (hideList) {
         $(questionSection).toggle();
@@ -92,7 +93,17 @@ $(beginGame).on('click', function () {
     });
 // end of elements showing selves on click start.
 
+// questionIndex
+
 
 // var pTest = $('<p>');
 // pTest.text('test');
 // testers.append(pTest);
+
+// link buttons to answers
+//if correct move on(){}
+//else deduct time (){}
+// questionIndex++ 
+// nextquestion();
+// call quizover/endquiz function to populate score page
+

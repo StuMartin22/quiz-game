@@ -18,11 +18,6 @@ var questionSection = $('#questionSection')
 var questions = $('#questions')
 var answers = $('#answers')
 var buttons = $('#buttons')
-// var buttonList = $('<ol>')
-// var buttonOne = $('<li>')
-// var buttonTwo = $('<li>')
-// var buttonThree = $('<li>')
-// var buttonFour = $('<li>') 
 
 var hideList = false
 var questionIndex = 0
@@ -35,12 +30,6 @@ var beginningBtn = $('#beginning')
 
 // The following begin appending children elements to parent element 
 // line 1 appends child element buttonList to parent element buttons
-// $(buttons).append(buttonList); 
-// $(buttonList).append(buttonOne); 
-// $(buttonList).append(buttonTwo);
-// $(buttonList).append(buttonThree);
-// $(buttonList).append(buttonFour);
-
 $(sectionOne).append(titleActual);
 $(sectionOne).append(gameRulesParagraph);
 $(sectionOne).append(beginGame); 
@@ -73,20 +62,6 @@ $(beginGame).click(startGame)
 
 // game starts and elements show themselves on click of start game button.
 $(beginGame).click(screenFlip)
-// ('click', function () {
-//     if (hideList) {
-//         $(questionSection).toggle();
-//         $(".card-timer").toggle();
-//         $("#sectionOne").toggle();
-//         hideList = !hideList;
-//     } else {
-//         $(questionSection).toggle();
-//         $(".card-timer").toggle();
-//         $("#sectionOne").toggle();
-//         hideList = !hideList;
-//         }
-//     }
-// );
 
 $(continueBtn).on('click', function () {
     $(gameOver).toggle();
@@ -95,10 +70,9 @@ $(continueBtn).on('click', function () {
 });
 
 $(beginningBtn).on('click', function () {
-    $(sectionOne).toggle()
-    $(highScorePage).toggle()
-    // $('.card-timer').toggle()
-    // $(questionSection).toggle()
+    $(sectionOne).toggle();
+    $(highScorePage).toggle();
+    location.reload();
 });
 
 // end of elements showing selves on click start.
@@ -110,16 +84,10 @@ function startGame () {
             clearInterval(timer);
         } else if (timeLeft === 0) { 
             $(timeDisplay).text(timeLeft);
-            // $(timeDisplay).text('') 
-            // $(".card-timer").text('');
-            // $(questionSection).text('');
-            // $(timeDisplay).toggle()
-            // $(".card-timer").toggle()
             $(sectionThree).toggle();
             $(questionSection).toggle();
             $(gameOver).toggle();
         } else $(timeDisplay).text(timeLeft);
-        // $(questionSection).toggle();
 } ,1000) 
 };
 

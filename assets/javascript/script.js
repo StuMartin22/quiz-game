@@ -112,6 +112,52 @@ function screenFlip () {
 //     if 
 // }
 // questionIndex
+
+// function nextQuestion(questionIndex) {
+//     $(questions).text= ("")
+//     $(answers).text= ("")
+//     for (var i = 0; i < gameQuestions.length; i++) {
+//         var Q = (gameQuestions[Index].question)
+//         var answerList= (gameQuestions[Index].answers)
+//         gameQuestions.textContent = Q
+//     }
+//     answerList.each(function(ans) {
+//         var answerButton= $('<button>'); 
+//         $(answerButton).style.position = "inline";
+//         $(answerButton).css(style.left = "49%");
+//         $(answerButton).css(style.transform = "translateX(-49%)");
+//             $(answerButton).addclass("answer-btn")
+//             $(answerButton).text = ans
+//             $(userChoice).append(answerButton)
+//             $(answerButton).on('click', function () {
+//                 //console.log(answerButton.textContent)
+//                 ansCheck(answerButton.text)
+//             })
+//     })
+// }
+// let answer;
+// var scoreKeeper= [];
+// var anAnswer = anAnswer || 0;
+// //function to check for correct/incorrect answers in the object and to deduct time for incorrect selections
+// //function also displays messages on correct/incorrect 
+// var checker= $('<h2>')
+// function ansCheck(answer) {
+//     var scoreBoard= document.getElementById('scoreInfo')
+//         if ($(answer) === $(questions)[questionIndex].correct) {
+//             anAnswer++;
+//             $(scoreBoard).text= anAnswer + " out of 5 correct answers";
+//             $(checker).text= "Great work! Your selection is correct."
+//         }
+//             else {
+//                 console.log("wrong")
+//                 $(checker).text= "Sorry! Your selection is incorrect. Please refresh the browser to try again."
+//                 $(timeLeft)= timeLeft-15;
+//             }
+//             $(questionSection).append(checker)
+//             questionIndex++;
+//             next(questionIndex)
+//             console.log(questionIndex)
+// }
 // $(beginGame).on("click", function nextQuestion () {
 //     console.log(gameQuestions[questionIndex])
 //     questionIndex++;

@@ -1,12 +1,12 @@
 var questionIndex = 0
 var gameQuestions = [
     {
-        question: "the question",
+        question: "the question 1",
         answers: ['A', 'B', 'C'],
         correct: 'A'
     },
     {
-        question: "the question",
+        question: "the question 2",
         answers: ['A', 'B', 'C'],
         correct: 'A',
     },
@@ -26,6 +26,7 @@ var gameQuestions = [
         correct: 'C',
     },
 ]
+let answerList;
 
 var initialsInput = $('#initialsForm') 
 var topTen = [] 
@@ -45,10 +46,10 @@ let currentPlayer;
 $(continueBtn).on('click', function (event) {
     event.preventDefault();
     console.log(initialsInput);
-    currentPlayer = {
-        initials: $(initialsInput).val()
-    };
-    $(topTen).push(currentPlayer);
+    // currentPlayer = {
+    // initials: $(initialsInput).text()
+    // };
+    $(topTen).push(initialsInput);
     localStorage.setItem('initialsInput', JSON.stringify(topTen));
     renderMessage();
     console.log(topTen);
@@ -57,8 +58,8 @@ $(continueBtn).on('click', function (event) {
 function renderMessage(topTen) {
     var scoreSheet = JSON.parse(localStorage.getItem("initialsInput"));
     for (var i=0; i < scoreSheet.length; i++) {
-        console.log(scoreSheet[currentPlayer]);
-        everything += playerListFromStorage[currentPlayer];
+        console.log(scoreSheet[initialsInput]);
+        everything += playerListFromStorage[initialsInput];
     }
     var everything ="";
     $('#userForm').innerHTML = everything;

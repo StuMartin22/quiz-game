@@ -43,24 +43,31 @@ let currentPlayer;
 //     })
 // });
 
-$(continueBtn).on('click', function (event) {
+continueBtn.on('click', function (event) {
     event.preventDefault();
     console.log(initialsInput);
+    var initials = initialsInput.val()
+    console.log(initials);
     // currentPlayer = {
     // initials: $(initialsInput).text()
     // };
-    $(topTen).push(initialsInput);
+    topTen.push(initials);
     localStorage.setItem('initialsInput', JSON.stringify(topTen));
+    console.log(topTen);
     renderMessage();
     console.log(topTen);
 });
 
 function renderMessage(topTen) {
     var scoreSheet = JSON.parse(localStorage.getItem("initialsInput"));
+    console.log(scoreSheet);
     for (var i=0; i < scoreSheet.length; i++) {
-        console.log(scoreSheet[initialsInput]);
-        everything += playerListFromStorage[initialsInput];
+        console.log(scoreSheet[i]);
+        var liEl = $('<li class="scores">')
+        liEl.text(scoreSheet[i])
+        $('ul').append(liEl);
+        // everything += playerListFromStorage[i];
     }
-    var everything ="";
-    $('#userForm').innerHTML = everything;
+    // var everything ="";
+    // $('#userForm').innerHTML = everything;
 }

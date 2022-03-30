@@ -113,16 +113,16 @@ function screenFlip () {
 // }
 // questionIndex
 // $(beginGame).on("click", function nextQuestion () {
-//     // console.log(gameQuestions[questionIndex])
+//     console.log(gameQuestions[questionIndex])
 //     questionIndex++;
-//     // console.log(gameQuestions[questionIndex])
+//     console.log(gameQuestions[questionIndex])
 //     if (questionIndex===gameQuestions.length) {
 //         console.log('true')
 //     } else {
 //         nextQuestion();
 //     }
 //     });
-//     // nextQuestion();
+    // nextQuestion();
 // var pTest = $('<p>');
 // pTest.text('test');
 // testers.append(pTest);

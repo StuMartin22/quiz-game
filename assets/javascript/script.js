@@ -6,8 +6,8 @@ var rootEl = $('#root');
 var sectionOne = $('#sectionOne')
 var titleActual = $('<h1>')
 var gameRulesParagraph = $('<p>')
-var bigTitle = $('.mainTitle') 
-var gameRules = $('.rules') 
+// var bigTitle = $('.mainTitle') 
+// var gameRules = $('.rules') 
 var beginGame = $('.start-btn')
 var timeLeft = 5
 var timeDisplay = $('.timerStart')
@@ -26,6 +26,7 @@ var gameOver = $('#gameOver')
 var continueBtn = $('#continueBtn')
 var highScorePage = $('#highScorePage')
 var beginningBtn = $('#beginning')
+var initials = $('.initials')
 // end of variable definitions
 
 // The following begin appending children elements to parent element 
@@ -66,6 +67,7 @@ $(beginGame).click(screenFlip)
 $(continueBtn).on('click', function () {
     $(gameOver).toggle();
     $(highScorePage).toggle();
+    // $(promptUser)
 });
 
 $(beginningBtn).on('click', function () {
@@ -103,6 +105,7 @@ function screenFlip () {
         hideList = !hideList;
         }
     };
+
 
 
 // var endGame = function () {

@@ -66,7 +66,6 @@ $(beginGame).click(screenFlip)
 $(continueBtn).on('click', function () {
     $(gameOver).toggle();
     $(highScorePage).toggle();
-    // $(timeDisplay).text(5)
 });
 
 $(beginningBtn).on('click', function () {
@@ -104,13 +103,12 @@ function screenFlip () {
         hideList = !hideList;
         }
     };
+
+
 // var endGame = function () {
 //     if 
 // }
-
-
 // questionIndex
-
 // $(beginGame).on("click", function nextQuestion () {
 //     // console.log(gameQuestions[questionIndex])
 //     questionIndex++;
@@ -121,14 +119,10 @@ function screenFlip () {
 //         nextQuestion();
 //     }
 //     });
-
 //     // nextQuestion();
-
-
 // var pTest = $('<p>');
 // pTest.text('test');
 // testers.append(pTest);
-
 // link buttons to answers
 //if correct move on(){}
 //else deduct time (){}
@@ -136,3 +130,11 @@ function screenFlip () {
 // nextquestion();
 // call quizover/endquiz function to populate score page
 
+//TODO:
+//create input when user hits game over
+//connect questions and answers to appropriate elements
+//function where if answer is correct move on
+//function where if answer is incorrect reduce time
+//set local storage
+//push to and from local storage
+//if questions run out or if time runs out show end game page
